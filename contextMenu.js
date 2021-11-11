@@ -2,7 +2,7 @@
 // @name            Context Menu
 // @namespace  https://admin-app.photocreate.jp/
 // @description   フォトクリ管理画面の検索機能
-// @version         0.1.1
+// @version         0.1.2
 // @author          Photocreate
 // @include         *
 // @exclude        file://*
@@ -93,7 +93,7 @@
         const url = buildSearchByEventId(query);
         GM_log(url);
         if (url.length > 0) {
-            GM_openInTab(url);
+            GM_openInTab(url, { active: true });
         }
     }, "a");
 
@@ -103,7 +103,7 @@
         const url = buildSearchByEventName(query);
         GM_log(url);
         if (url.length > 0) {
-            GM_openInTab(url);
+            GM_openInTab(url, { active: true });
         }
     }, "a");
     GM_registerMenuCommand("注文番号検索", () => {
@@ -112,7 +112,7 @@
         const url = buildSearchByOrderNum(query);
         GM_log(url);
         if (url.length > 0) {
-            GM_openInTab(url);
+            GM_openInTab(url, { active: true });
         }
     }, "a");
     GM_registerMenuCommand("写真番号検索", () => {
@@ -121,7 +121,7 @@
         const url = buildSearchByPhotoNum(query);
         GM_log(url);
         if (url.length > 0) {
-            GM_openInTab(url);
+            GM_openInTab(url, { active: true });
         }
     }, "a");
     GM_registerMenuCommand("GoogleCloudSearchで検索", () => {
@@ -129,8 +129,9 @@
         const url = buildGoogleCloudSearch(selected);
         GM_log(url);
         if (url.length > 0) {
-            GM_openInTab(url);
+            GM_openInTab(url, { active: true });
         }
     }, "g");
 
 })();
+

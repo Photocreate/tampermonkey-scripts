@@ -12,14 +12,15 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 （あとで書く）
 
 - [TampermonkeyのChromeWebStore](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related?hl=ja) を新しいウィンドウで開き、「Chromeへ追加」ボタンを押してインストール
-- [zipファイル](https://github.com/tetsunosuke/tampermonkey-scripts/raw/dev/resources/tampermonkey-backup-chrome-2021-11-11T04-57-06-834Z.zip)をインポート
+- [zipファイル](https://github.com/tetsunosuke/tampermonkey-scripts/raw/dev/resources/import.zip)をインポート
     - インポートは「ユーティリティ」から行う
+        - この説明は難しいので後で書く
 
 ## カスタマイズの具体・設定
 
 （あとで書く）
 
-### スクリプトの自作方法
+### スクリプトの自作方法、修正方法
 
 （あとで書く）
 
