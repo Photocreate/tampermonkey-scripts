@@ -1,6 +1,6 @@
 # tampermonkey-scripts
 
-Chrome 拡張機能である [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related?hl=ja)で使えるスクリプトの倉庫
+Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related?hl=ja)）で使えるスクリプトの倉庫
 
 ## Tampermonkey とは
 
@@ -9,24 +9,23 @@ Chrome 拡張機能である [Tampermonkey](https://chrome.google.com/webstore/d
 
 ## インストールと初期設定
 
-TBW
+（あとで書く）
 
-- 上記のURLからダウンロードしてインストール
+- [TampermonkeyのChromeWebStore](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related?hl=ja) を新しいウィンドウで開き、「Chromeへ追加」ボタンを押してインストール
 - [zipファイル](https://github.com/tetsunosuke/tampermonkey-scripts/raw/dev/resources/tampermonkey-backup-chrome-2021-11-11T04-57-06-834Z.zip)をインポート
     - インポートは「ユーティリティ」から行う
 
 ## カスタマイズの具体・設定
 
-TBW
+（あとで書く）
 
-### スクリプトの自作
+### スクリプトの自作方法
 
-TBW
+（あとで書く）
 
 ### その他
 
-TBW
-
+（あとで書く）
 
 ## 昔あった機能
 
