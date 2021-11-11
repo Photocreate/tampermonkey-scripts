@@ -61,6 +61,24 @@
         return adminAppUrl + `action_support_order_detail=true&order_num=${query}#result`;
     }
 
+    /**
+      * 写真番号検索のURLを生成
+      */
+    const buildSearchByPhotoNum = (query) => {
+        if(query.indexOf("\r") > 0 || query.indexOf("\n") > 0) {
+            query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "%0D%0A");
+        }
+        query = query.trim()
+        return adminAppUrl + "action_open_photo_edit=true&page=0&capa=1&photo_numbers=" + query
+    }
+
+    /**
+     * Google Cloud Search で検索するURLを生成
+     */
+    const buildGoogleCloudSearch = (query) => {
+        return "https://cloudsearch.google.com/cloudsearch/search?q=" + query;
+    }
+
     /*
     GM_registerMenuCommand("（動作テスト用 console.log）", () => {
         const selected = document.getSelection().toString();
@@ -77,7 +95,7 @@
         if (url.length > 0) {
             GM_openInTab(url);
         }
-    }, "e");
+    }, "a");
 
     GM_registerMenuCommand("イベント名で検索", () => {
         const selected = document.getSelection().toString();
@@ -87,7 +105,7 @@
         if (url.length > 0) {
             GM_openInTab(url);
         }
-    }, "e");
+    }, "a");
     GM_registerMenuCommand("注文番号検索", () => {
         const selected = document.getSelection().toString();
         const query = replaceFullToHalf(selected);
@@ -96,6 +114,23 @@
         if (url.length > 0) {
             GM_openInTab(url);
         }
-    }, "e");
+    }, "a");
+    GM_registerMenuCommand("写真番号検索", () => {
+        const selected = document.getSelection().toString();
+        const query = replaceFullToHalf(selected);
+        const url = buildSearchByPhotoNum(query);
+        GM_log(url);
+        if (url.length > 0) {
+            GM_openInTab(url);
+        }
+    }, "a");
+    GM_registerMenuCommand("GoogleCloudSearchで検索", () => {
+        const selected = document.getSelection().toString();
+        const url = buildGoogleCloudSearch(selected);
+        GM_log(url);
+        if (url.length > 0) {
+            GM_openInTab(url);
+        }
+    }, "g");
 
 })();
