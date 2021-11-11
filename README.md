@@ -12,7 +12,8 @@ Chrome 拡張機能である [Tampermonkey](https://chrome.google.com/webstore/d
 TBW
 
 - 上記のURLからダウンロードしてインストール
-- 所定のzipファイルをインポート
+- [zipファイル](https://github.com/tetsunosuke/tampermonkey-scripts/raw/dev/resources/tampermonkey-backup-chrome-2021-11-11T04-57-06-834Z.zip)をインポート
+    - インポートは「ユーティリティ」から行う
 
 ## カスタマイズの具体・設定
 
@@ -31,11 +32,14 @@ TBW
 
 移植するかどうかは要望の多さで決める
 
-- 写真番号検索
-- 注文番号検索
-- カメラマン検索
-- 学校検索
-- Gmail検索（これは CloudSearch検索として移植しようとは思っている）
+- イベントID検索(済)
+- イベント名検索(済)
+- 写真番号検索(済)
+- 注文番号検索(済)
+- Gmail検索（CloudSearch検索として移植済）
 - 取引先検索
 - Googleカレンダーに予定を追加
+- カメラマン検索
+- 学校検索
+- その他のブックマークレット
 
