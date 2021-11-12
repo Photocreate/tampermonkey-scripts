@@ -45,7 +45,7 @@
         const url = buildSearchByEventId(query);
         GM_log(url);
         if (url.length > 0) {
-            GM_openInTab(url);
+            GM_openInTab(url, {active: true});
         }
     }, "e");
 })();
