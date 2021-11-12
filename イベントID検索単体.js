@@ -9,7 +9,7 @@
 // @grant        GM_log
 // @grant        GM_openInTab
 // @grant        GM_registerMenuCommand
-// @grant
+// @run-at       context-menu
 // ==/UserScript==
 
 (function() {
