@@ -1,14 +1,13 @@
 // ==UserScript==
 // @name         イベントID検索
 // @namespace    https://admin-app.photocreate.jp/
-// @version      0.1
-// @description  try to take over the world!
+// @version      0.1.1
+// @description  
 // @include         *
 // @exclude        file://*
 // @author       You
 // @grant        GM_log
 // @grant        GM_openInTab
-// @grant        GM_registerMenuCommand
 // @run-at       context-menu
 // ==/UserScript==
 
@@ -39,13 +38,11 @@
             return adminAppUrl + "action_event_info=true&events_id=" + query;
         }
     }
-    GM_registerMenuCommand("イベントID検索", () => {
-        const selected = document.getSelection().toString();
-        const query = replaceFullToHalf(selected);
-        const url = buildSearchByEventId(query);
-        GM_log(url);
-        if (url.length > 0) {
-            GM_openInTab(url, {active: true});
-        }
-    }, "e");
+    const selected = document.getSelection().toString();
+    const query = replaceFullToHalf(selected);
+    const url = buildSearchByEventId(query);
+    GM_log(url);
+    if (url.length > 0) {
+        GM_openInTab(url, {active: true});
+    }
 })();
