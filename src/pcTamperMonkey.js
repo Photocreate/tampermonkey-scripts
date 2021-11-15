@@ -1,4 +1,4 @@
-class PCTamperMonkey {
+export default class PCTamperMonkey {
     settings = {};
     constructor(settings) {
         if (typeof settings === "undefined") {
@@ -105,5 +105,4 @@ class PCTamperMonkey {
         return url.toString();
     }
 }
-export default PCTamperMonkey;
 
