@@ -14,7 +14,6 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
   _defineProperty(this, "settings", {});
 
   _defineProperty(this, "buildSearchURLByEventId", function (query) {
-    console.log(_this.settings);
     var url = new URL(_this.settings.adminAppUrl);
 
     if (query.length === 0) {
@@ -83,8 +82,6 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
     return url.toString();
   });
 
-  console.log(settings);
-
   if (typeof settings === "undefined") {
     // default values
     this.settings.adminAppUrl = 'https://admin-app.photocreate.jp/adm/';
@@ -93,8 +90,6 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
       this.settings.adminAppUrl = ettings.adminAppUrl;
     }
   }
-
-  console.log(this.settings);
 } // 全半角変換
 ;
 

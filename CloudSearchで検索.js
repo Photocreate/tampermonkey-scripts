@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         イベントID検索
+// @name         CloudSearchで検索
 // @namespace    https://admin-app.photocreate.jp/
 // @version      1.0
-// @description  管理画面から選択した文字列をもとにイベントID検索を行います
+// @description  選択した文字列をGoogle CloudSearch で検索します
 // @include      *
 // @exclude      file://*
 // @require      https://raw.githubusercontent.com/tetsunosuke/tampermonkey-scripts/main/dist/pcTamperMonkey.js
@@ -16,8 +16,8 @@
     'use strict';
     const pcTM = new PCTamperMonkey();
     const selected = document.getSelection().toString();
-    const query = PCTamperMonkey.replaceFullToHalf(selected);
-    const url = pcTM.buildSearchURLByEventId(query);
+    const query = selected;
+    const url = pcTM.buildGoogleCloudSearchURL(query);
     GM_log(url);
     if (url.length > 0) {
         GM_openInTab(url, {active: true});
