@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "build": "babel ./src/*.js --out-dir ./dist"
+  },
+  "name": "tampermonkey-scripts",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tetsunosuke/tampermonkey-scripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tetsunosuke/tampermonkey-scripts/issues"
+  },
+  "homepage": "https://github.com/tetsunosuke/tampermonkey-scripts#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/cli": "^7.0.0"
+
+  }
+}
