@@ -1,6 +1,7 @@
 class PCTamperMonkey {
     settings = {};
     constructor(settings) {
+        console.log(settings);
         if (typeof settings === "undefined") {
             // default values
             this.settings.adminTopUrl = 'https://admin-app.photocreate.jp/adm/';
@@ -9,6 +10,7 @@ class PCTamperMonkey {
                 this.settings.adminTopUrl = ettings.adminTopUrl;
             }
         }
+        console.log(this.settings);
     }
 
     // 全半角変換
@@ -22,6 +24,7 @@ class PCTamperMonkey {
      * イベントID検索のURLを生成
      */
     buildSearchURLByEventId = (query) => {
+        console.log(this.settings);
         const url = new URL(this.settings.adminAppUrl);
         if (query.length === 0) {
             return;

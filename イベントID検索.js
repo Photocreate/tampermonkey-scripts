@@ -14,9 +14,10 @@
 
 (function() {
     'use strict';
+    const pcTM = new PCTamperMonkey();
     const selected = document.getSelection().toString();
-    const query = pcTamperMonkey.replaceFullToHalf(selected);
-    const url = pcTamperMonkey.buildSearchByEventId(query);
+    const query = PCTamperMonkey.replaceFullToHalf(selected);
+    const url = pcTM.buildSearchURLByEventId(query);
     GM_log(url);
     if (url.length > 0) {
         GM_openInTab(url, {active: true});
