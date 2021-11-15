@@ -1,5 +1,10 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -48,6 +53,7 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
     url.searchParams.set("action_event_search_form", "true");
     url.searchParams.set("action_event_search_result", "true");
     url.searchParams.set("event_name", query);
+    url.hash("result");
     return url.toString();
   });
 
@@ -96,3 +102,6 @@ _defineProperty(PCTamperMonkey, "replaceFullToHalf", function (str) {
     return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
   });
 });
+
+var _default = PCTamperMonkey;
+exports["default"] = _default;

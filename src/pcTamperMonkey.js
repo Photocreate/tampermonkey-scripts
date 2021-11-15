@@ -6,7 +6,7 @@ class PCTamperMonkey {
             this.settings.adminAppUrl = 'https://admin-app.photocreate.jp/adm/';
         } else {
             if (typeof settings.adminAppUrl !== "undefined") {
-                this.settings.adminAppUrl = ettings.adminAppUrl;
+                this.settings.adminAppUrl = settings.adminAppUrl;
             }
         }
     }
@@ -105,3 +105,5 @@ class PCTamperMonkey {
         return url.toString();
     }
 }
+export default PCTamperMonkey;
+

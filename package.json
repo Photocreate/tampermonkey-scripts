@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "babel ./src/*.js --out-dir ./dist"
+    "build": "babel ./src/*.js --out-dir ./dist",
+    "test": "jest"
   },
   "name": "tampermonkey-scripts",
   "description": "",
@@ -17,10 +18,14 @@
   },
   "homepage": "https://github.com/tetsunosuke/tampermonkey-scripts#readme",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
-    "@babel/cli": "^7.0.0"
-
+    "jest": "^27.3.1"
+  },
+  "jest": {
+    "testRegex": "./test/.*.js$",
+    "rootDir": "."
   }
 }
