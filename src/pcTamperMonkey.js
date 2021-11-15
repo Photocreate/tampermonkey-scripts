@@ -71,7 +71,7 @@ class PCTamperMonkey {
     buildSearchURLByOrderNum = (query) => {
         const url = new URL(this.settings.adminAppUrl);
         url.searchParams.set("action_support_order_detail", "true");
-        url.searchParams.set("action_support_order_num", query);
+        url.searchParams.set("order_num", query);
         url.hash = "result";
 
         return url.toString();
@@ -86,7 +86,6 @@ class PCTamperMonkey {
             //query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "%0D%0A");
             query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "\r\n");
         }
-        query = query.trim()
 
         url.searchParams.set("action_open_photo_edit", "true");
         url.searchParams.set("capa", "1");

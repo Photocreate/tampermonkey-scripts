@@ -48,13 +48,14 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
     url.searchParams.set("action_event_search_form", "true");
     url.searchParams.set("action_event_search_result", "true");
     url.searchParams.set("event_name", query);
+    url.hash("result");
     return url.toString();
   });
 
   _defineProperty(this, "buildSearchURLByOrderNum", function (query) {
     var url = new URL(_this.settings.adminAppUrl);
     url.searchParams.set("action_support_order_detail", "true");
-    url.searchParams.set("action_support_order_num", query);
+    url.searchParams.set("order_num", query);
     url.hash = "result";
     return url.toString();
   });
@@ -67,7 +68,6 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
       query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "\r\n");
     }
 
-    query = query.trim();
     url.searchParams.set("action_open_photo_edit", "true");
     url.searchParams.set("capa", "1");
     url.searchParams.set("photo_numbers", query);
