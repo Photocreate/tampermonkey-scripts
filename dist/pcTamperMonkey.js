@@ -87,10 +87,10 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
 
   if (typeof settings === "undefined") {
     // default values
-    this.settings.adminTopUrl = 'https://admin-app.photocreate.jp/adm/';
+    this.settings.adminAppUrl = 'https://admin-app.photocreate.jp/adm/';
   } else {
-    if (typeof settings.adminTopUrl !== "undefined") {
-      this.settings.adminTopUrl = ettings.adminTopUrl;
+    if (typeof settings.adminAppUrl !== "undefined") {
+      this.settings.adminAppUrl = ettings.adminAppUrl;
     }
   }
 
