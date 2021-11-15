@@ -1,4 +1,5 @@
 export class PCTamperMonkey {
+
     settings = {};
     constructor(settings) {
         if (typeof settings === "undefined") {
@@ -71,7 +72,7 @@ export class PCTamperMonkey {
     buildSearchURLByOrderNum = (query) => {
         const url = new URL(this.settings.adminAppUrl);
         url.searchParams.set("action_support_order_detail", "true");
-        url.searchParams.set("action_support_order_num", query);
+        url.searchParams.set("order_num", query);
         url.hash = "result";
 
         return url.toString();
