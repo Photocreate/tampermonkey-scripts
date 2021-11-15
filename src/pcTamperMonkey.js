@@ -1,4 +1,5 @@
-class PCTamperMonkey {
+export class PCTamperMonkey {
+
     settings = {};
     constructor(settings) {
         if (typeof settings === "undefined") {
@@ -6,7 +7,7 @@ class PCTamperMonkey {
             this.settings.adminAppUrl = 'https://admin-app.photocreate.jp/adm/';
         } else {
             if (typeof settings.adminAppUrl !== "undefined") {
-                this.settings.adminAppUrl = ettings.adminAppUrl;
+                this.settings.adminAppUrl = settings.adminAppUrl;
             }
         }
     }
@@ -59,7 +60,7 @@ class PCTamperMonkey {
         url.searchParams.set("action_event_search_form", "true");
         url.searchParams.set("action_event_search_result", "true");
         url.searchParams.set("event_name", query);
-        url.hash("result")
+        url.hash = "result"
 
         return url.toString();
     }
@@ -86,6 +87,7 @@ class PCTamperMonkey {
             //query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "%0D%0A");
             query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "\r\n");
         }
+        query = query.trim()
 
         url.searchParams.set("action_open_photo_edit", "true");
         url.searchParams.set("capa", "1");
