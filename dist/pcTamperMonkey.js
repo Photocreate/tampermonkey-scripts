@@ -91,7 +91,7 @@ var PCTamperMonkey = function PCTamperMonkey(settings) {
     this.settings.adminAppUrl = 'https://admin-app.photocreate.jp/adm/';
   } else {
     if (typeof settings.adminAppUrl !== "undefined") {
-      this.settings.adminAppUrl = ettings.adminAppUrl;
+      this.settings.adminAppUrl = settings.adminAppUrl;
     }
   }
 } // 全半角変換
