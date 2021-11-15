@@ -1,8 +1,3 @@
-export class Tom {
-    sayHello() {
-        return "hoge";
-    }
-}
 export class PCTamperMonkey {
     settings = {};
     constructor(settings) {
@@ -64,7 +59,7 @@ export class PCTamperMonkey {
         url.searchParams.set("action_event_search_form", "true");
         url.searchParams.set("action_event_search_result", "true");
         url.searchParams.set("event_name", query);
-        url.hash("result")
+        url.hash = "result"
 
         return url.toString();
     }
