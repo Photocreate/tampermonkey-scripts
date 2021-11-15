@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         イベントID検索
 // @namespace    https://admin-app.photocreate.jp/
-// @version      0.1.1
+// @version      0.9
 // @description  管理画面から選択した文字列をもとにイベントID検索を行います
-// @include         *
-// @exclude        file://*
+// @include      *
+// @exclude      file://*
+// @require      https://raw.githubusercontent.com/tetsunosuke/tampermonkey-scripts/main/dist/pcTamperMonkey.js
 // @author       ITO Tetsunosuke
 // @grant        GM_log
 // @grant        GM_openInTab
