@@ -1,4 +1,9 @@
-export default class PCTamperMonkey {
+export class Tom {
+    sayHello() {
+        return "hoge";
+    }
+}
+export class PCTamperMonkey {
     settings = {};
     constructor(settings) {
         if (typeof settings === "undefined") {
@@ -105,4 +110,3 @@ export default class PCTamperMonkey {
         return url.toString();
     }
 }
-
