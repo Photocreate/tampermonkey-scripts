@@ -18,7 +18,7 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 ### 初期設定
 
 
-- [zipファイル](https://github.com/tetsunosuke/tampermonkey-scripts/releases/download/v1.0/tampermonkey-1.0.zip)をダウンロードしておきます（解凍する必要はありません）
+- [zipファイル](https://github.com/photocreate/tampermonkey-scripts/releases/download/v1.0/tampermonkey-1.0.zip)をダウンロードしておきます（解凍する必要はありません）
 - 拡張機能のオプション画面を開きます
     - URLに `chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils` を入力します
     - `ユーティリティ` タブを開きます

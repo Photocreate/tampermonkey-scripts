@@ -5,7 +5,7 @@
 // @description  管理画面から選択した文字列をもとに注文番号検索を行います
 // @include      *
 // @exclude      file://*
-// @require      https://raw.githubusercontent.com/tetsunosuke/tampermonkey-scripts/main/dist/pcTamperMonkey.js
+// @require      https://raw.githubusercontent.com/photocreate/tampermonkey-scripts/main/dist/pcTamperMonkey.js
 // @author       ITO Tetsunosuke
 // @grant        GM_log
 // @grant        GM_openInTab
