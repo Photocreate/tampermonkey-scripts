@@ -65,6 +65,14 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 
 ## その他
 
+### 便利なスクリプト
+
+下記のような便利なスクリプトが公開されています。自分でインストールしてみましょう
+
+- [Zoom - Close Stupid Windows](https://gist.github.com/happiness801/9c8f63a473375b38e72a98fe3541c288/raw/6528bbd1c3188afa62ea4a8607657d6b6e58defe/zoom-remove-join-meeting-tabs.user.js) Zoomミーティングに参加した後の不要な画面を自動で閉じてくれます
+
+他にも [UserScript.zone](https://www.userscript.zone/) などに便利なものが公開されているので探してみてください。（良いものが見つかったらぜひ共有してください）
+
 ### バグを見つけたら
 
 動作上の不具合があった場合には下記をつけてもらえると助かります
