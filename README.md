@@ -8,8 +8,12 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 
 スクリプトを書くことでブラウザの挙動をカスタマイズする GreaseMonkey という仕組みを使うことができます。
 
+今後はこの拡張機能を使って従前の「[フォトクリエイト便利拡張機能](https://chrome.google.com/webstore/detail/%E3%83%95%E3%82%A9%E3%83%88%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%88%E4%BE%BF%E5%88%A9%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/gjmkkimkgknlnikphlmgmhedanmaikmj)」で利用していた便利機能を利用できるようにします。
+
 
 ## インストールと初期設定
+
+下記の手順に関しては[動画説明マニュアル](https://drive.google.com/file/d/1B0Ey7Wv7M9pF3Lh8QDY_UutlXv_W_ivK/view)がありますのでこちらも参考にしてください（ 🙇 小池さん）
 
 ### 拡張機能本体のインストール
 
