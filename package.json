@@ -2,6 +2,7 @@
   "scripts": {
     "build": "babel ./src/*.js --out-dir ./dist",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "webpack": "webpack",
     "watch": "webpack watch"
   },

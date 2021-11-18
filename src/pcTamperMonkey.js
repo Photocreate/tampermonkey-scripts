@@ -2,11 +2,14 @@ export class PCTamperMonkey {
 
     settings = {};
     constructor(settings) {
+        const defaultAdminAppUrl = 'https://admin-app.photocreate.jp/adm/';
         if (typeof settings === "undefined") {
             // default values
-            this.settings.adminAppUrl = 'https://admin-app.photocreate.jp/adm/';
+            this.settings.adminAppUrl = defaultAdminAppUrl;
         } else {
-            if (typeof settings.adminAppUrl !== "undefined") {
+            if (typeof settings.adminAppUrl === "undefined") {
+                this.settings.adminAppUrl = defaultAdminAppUrl;
+            } else {
                 this.settings.adminAppUrl = settings.adminAppUrl;
             }
         }
@@ -35,13 +38,14 @@ export class PCTamperMonkey {
         } else if (query.indexOf("P") === 0 || query.indexOf("p") === 0) {
             // 先頭の大文字小文字のPを残して検索
             url.searchParams.set("action_event_search_resultnavi", "true");
-            url.searchParams.set("events_id", query);
+            url.searchParams.set("search_type", "event");
+            url.searchParams.set("search_str", query);
         } else if (isFinite(parseInt(query))) {
             // 数値のみもイベントIDとみなす
             url.searchParams.set("action_event_info", "true");
             url.searchParams.set("events_id", query);
         } else {
-            GM_log("条件にあてはまらないのでイベント名検索します");
+            // 条件にあてはまらないのでイベント名検索
             return this.buildSearchURLByEventName(query);
         }
 
@@ -71,6 +75,9 @@ export class PCTamperMonkey {
       */
     buildSearchURLByOrderNum = (query) => {
         const url = new URL(this.settings.adminAppUrl);
+        if (query.length === 0) {
+            return;
+        }
         url.searchParams.set("action_support_order_detail", "true");
         url.searchParams.set("order_num", query);
         url.hash = "result";
@@ -83,6 +90,9 @@ export class PCTamperMonkey {
       */
     buildSearchURLByPhotoNum = (query) => {
         const url = new URL(this.settings.adminAppUrl);
+        if (query.length === 0) {
+            return;
+        }
         if(query.indexOf("\r") > 0 || query.indexOf("\n") > 0) {
             //query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "%0D%0A");
             query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "\r\n");
