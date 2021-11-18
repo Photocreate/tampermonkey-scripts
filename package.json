@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "build": "babel ./src/*.js --out-dir ./dist",
+    "build:babel": "babel ./src/*.js --out-dir ./dist",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "webpack": "webpack",
+    "build": "webpack",
     "watch": "webpack watch"
   },
   "name": "tampermonkey-scripts",
