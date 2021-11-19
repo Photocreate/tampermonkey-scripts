@@ -111,6 +111,22 @@ export class PCTamperMonkey {
      */
     buildGoogleCloudSearchURL = (query) => {
         const url = new URL("https://cloudsearch.google.com/cloudsearch/search");
+        if (query.length === 0) {
+            return;
+        }
+        url.searchParams.set("q", query);
+
+        return url.toString();
+    }
+
+    /**
+     * ジョブカン労務検索
+     */
+    buildJobcanLMSSearchURL = (query) => {
+        const url = new URL("https://lms.jobcan.jp/employees");
+        if (query.length === 0) {
+            return;
+        }
         url.searchParams.set("q", query);
 
         return url.toString();

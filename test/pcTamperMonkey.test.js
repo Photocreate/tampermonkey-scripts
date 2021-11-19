@@ -18,6 +18,7 @@ describe("constructor without settings", () => {
         expect(pcTM.settings.adminAppUrl).toBe("https://admin-app.photocreate.jp/adm/")
     });
     test('buildGoogleCloudSearchURL', () => {
+        expect(pcTM.buildGoogleCloudSearchURL("")).toBeUndefined();
         expect(pcTM.buildGoogleCloudSearchURL("hoge")).toBe("https://cloudsearch.google.com/cloudsearch/search?q=hoge");
     });
     test('buildSearchURLByEventId', () => {
@@ -49,6 +50,11 @@ describe("constructor without settings", () => {
         expect(pcTM.buildSearchURLByPhotoNum("1-2\r3-4")).toBe("https://admin-app.photocreate.jp/adm/?action_open_photo_edit=true&capa=1&photo_numbers=1-2%0D%0A3-4");
         expect(pcTM.buildSearchURLByPhotoNum("1-2\r3-4\n5-6")).toBe("https://admin-app.photocreate.jp/adm/?action_open_photo_edit=true&capa=1&photo_numbers=1-2%0D%0A3-4%0D%0A5-6");
         expect(pcTM.buildSearchURLByPhotoNum("1-2\r\n3-4")).toBe("https://admin-app.photocreate.jp/adm/?action_open_photo_edit=true&capa=1&photo_numbers=1-2%0D%0A%0D%0A3-4");
+    });
+
+    test('buildJobcanLMSSearchURL', () => {
+        expect(pcTM.buildJobcanLMSSearchURL("")).toBeUndefined();
+        expect(pcTM.buildJobcanLMSSearchURL("あいうえお")).toBe("https://lms.jobcan.jp/employees?q=%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A");
     });
 });
 
