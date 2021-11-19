@@ -85,6 +85,34 @@ export class PCTamperMonkey {
         return url.toString();
     }
 
+    /**
+     * カメラマン名検索
+     */
+    buildSearchURLByPhotographerName = (query) => {
+        const url = new URL(this.settings.adminAppUrl);
+        if (query.length === 0) {
+            return;
+        }
+        url.searchParams.set("action_photographer_index", "true");
+        url.searchParams.set("search", "true");
+        url.searchParams.set("search_name", query);
+
+        return url.toString();
+    }
+    /**
+     * 取引先検索
+     */
+    buildSearchURLByPartnerName = (query) => {
+        const url = new URL(this.settings.adminAppUrl);
+        if (query.length === 0) {
+            return;
+        }
+        url.searchParams.set("action_partner_index", "true");
+        url.searchParams.set("search_str", query);
+
+        return url.toString();
+    }
+
      /**
       * 写真番号検索のURLを生成
       */
@@ -111,8 +139,27 @@ export class PCTamperMonkey {
      */
     buildGoogleCloudSearchURL = (query) => {
         const url = new URL("https://cloudsearch.google.com/cloudsearch/search");
+        if (query.length === 0) {
+            return;
+        }
         url.searchParams.set("q", query);
 
         return url.toString();
     }
+
+    /**
+     * ジョブカン労務検索
+     */
+    buildJobcanLMSSearchURL = (query) => {
+        const url = new URL("https://lms.jobcan.jp/employees");
+        if (query.length === 0) {
+            return;
+        }
+        url.searchParams.set("q", query);
+
+        return url.toString();
+    }
+
+
+
 }
