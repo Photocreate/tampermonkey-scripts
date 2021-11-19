@@ -44,6 +44,19 @@ describe("constructor without settings", () => {
         expect(pcTM.buildSearchURLByOrderNum("")).toBeUndefined();
         expect(pcTM.buildSearchURLByOrderNum("12345678")).toBe("https://admin-app.photocreate.jp/adm/?action_support_order_detail=true&order_num=12345678#result");
     });
+    test('buildSearchURLByPhotographerName', () => {
+        expect(pcTM.buildSearchURLByPhotographerName("")).toBeUndefined();
+        expect(pcTM.buildSearchURLByPhotographerName("あいうえお")).toBe("https://admin-app.photocreate.jp/adm/?action_photographer_index=true&search=true&search_name=%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A");
+    });
+    test('buildSearchURLByPartnerName', () => {
+        expect(pcTM.buildSearchURLByPartnerName("")).toBeUndefined();
+        expect(pcTM.buildSearchURLByPartnerName("あいうえお")).toBe("https://admin-app.photocreate.jp/adm/?action_partner_index=true&search_str=%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A");
+    });
+
+
+
+
+
     test('buildSearchURLByPhotoNum', () => {
         expect(pcTM.buildSearchURLByPhotoNum("")).toBeUndefined();
         expect(pcTM.buildSearchURLByPhotoNum("1234-5678")).toBe("https://admin-app.photocreate.jp/adm/?action_open_photo_edit=true&capa=1&photo_numbers=1234-5678");
