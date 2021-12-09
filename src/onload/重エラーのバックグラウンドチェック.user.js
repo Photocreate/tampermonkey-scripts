@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         [勤労の獅子]重エラーのバックグラウンドチェック
-// @namespace    https://kinrou.sas-cloud.jp/kinrou/
-// @version      1.0
+// @namespace    https://kinrou.hr44.jp/kinrou/kojin/kintaiDakoku/
+// @version      1.1
 // @description 勤労の獅子の当月勤怠データから重エラーを検知します
 // @author       ITO Tetsunosuke
-// @match      https://kinrou.sas-cloud.jp/kinrou/kojin/kintaiDakoku/
+// @match      https://kinrou.hr44.jp/kinrou/kojin/kintaiDakoku/
 // @grant        GM_log
 // @grant       GM_xmlhttpRequest
 // ==/UserScript==
@@ -20,10 +20,9 @@
             const _document = new DOMParser().parseFromString(response.responseText, "text/html");
             // hidari_kotei のtrの中で ..big_error_color であればそのindex、を取る
             // 重エラーのある日々
-            // TODO: 本日分は無視していいかも
             const hasErrorsIndexList = [..._document.querySelectorAll("#hidari_kotei tbody tr")].reduce( (ac, cv, index) => {
                 // 当日の重エラーは無視
-                if (index === new Date().getDate()) {
+                if (index === new Date().getDate()-1) {
                     return ac;
                 }
                 if (cv.classList.contains("big_error_color")) {
