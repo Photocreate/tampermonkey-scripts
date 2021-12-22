@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [勤労の獅子]重エラーのバックグラウンドチェック
 // @namespace    https://kinrou.hr44.jp/kinrou/kojin/kintaiDakoku/
-// @version      1.1
+// @version      1.1.1
 // @description 勤労の獅子の当月勤怠データから重エラーを検知します
 // @author       ITO Tetsunosuke
 // @match      https://kinrou.hr44.jp/kinrou/kojin/kintaiDakoku/
@@ -13,6 +13,13 @@
     'use strict';
 
     const url = "/kinrou/kojin/kojinbetuSyoukai/";
+     // ログアウト状態で表示しようとしたときに自動でログイン画面へ
+    const errorAnchor = document.querySelector("#error-suggestions a");
+    if (errorAnchor !== null) {
+        const href = errorAnchor.href;
+        location.href = href;
+        return;
+    }
     GM_xmlhttpRequest({
         method: "GET",
         url: url,
