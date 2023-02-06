@@ -26,7 +26,7 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 - 拡張機能のオプション画面を開きます
     - URLに `chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils` を入力します
     - `ユーティリティ` タブを開きます
-- `ZIP` の `インポート` から先程ダウンロードしたzipファイルを選択してダウンロードしたファイルをインポートします
+- `ファイルからインポート` から先程ダウンロードしたzipファイルを選択してダウンロードしたファイルをインポートします
 - `インストール済みUserScript` タブにいろいろ出てきたら成功です
 
 
