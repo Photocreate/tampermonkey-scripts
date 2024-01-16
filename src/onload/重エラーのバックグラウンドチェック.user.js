@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         [勤労の獅子]重エラーのバックグラウンドチェック
-// @namespace    https://kinrou.hr44.jp/kinrou/kojin/kintaiDakoku/
-// @version      1.1.1
+// @namespace    https://kinrouap1.hr44.jp/kinrou/kojin/kintaiDakoku/
+// @version      1.1.2
 // @description 勤労の獅子の当月勤怠データから重エラーを検知します
 // @author       ITO Tetsunosuke
-// @match      https://kinrou.hr44.jp/kinrou/kojin/kintaiDakoku/
+// @match      https://kinrouap1.hr44.jp/kinrou/kojin/kintaiDakoku/
 // @grant        GM_log
 // @grant       GM_xmlhttpRequest
 // ==/UserScript==
