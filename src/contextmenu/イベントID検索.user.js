@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [管理画面]イベントID検索
 // @namespace    https://admin-app.photocreate.jp/
-// @version      1.0
+// @version      1.1
 // @description  管理画面から選択した文字列をもとにイベントID検索を行います
 // @include      *
 // @exclude      file://*
