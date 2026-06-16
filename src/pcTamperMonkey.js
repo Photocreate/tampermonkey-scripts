@@ -26,10 +26,10 @@ export class PCTamperMonkey {
      * イベントID検索のURLを生成
      */
     buildSearchURLByEventId = (query) => {
-        const url = new URL(this.settings.adminAppUrl);
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL(this.settings.adminAppUrl);
 
         if (query.indexOf("E") === 0 || query.indexOf("e") === 0) {
             // 先頭の大文字小文字のEを削除して検索
@@ -57,10 +57,10 @@ export class PCTamperMonkey {
      * イベント名検索
      */
     buildSearchURLByEventName = (query) => {
-        const url = new URL(this.settings.adminAppUrl);
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL(this.settings.adminAppUrl);
         url.searchParams.set("action_event_search_form", "true");
         url.searchParams.set("action_event_search_result", "true");
         url.searchParams.set("event_name", query);
@@ -74,10 +74,10 @@ export class PCTamperMonkey {
       * 一旦半角だけ対応とする
       */
     buildSearchURLByOrderNum = (query) => {
-        const url = new URL(this.settings.adminAppUrl);
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL(this.settings.adminAppUrl);
         url.searchParams.set("action_support_order_detail", "true");
         url.searchParams.set("order_num", query);
         url.hash = "result";
@@ -89,10 +89,10 @@ export class PCTamperMonkey {
      * カメラマン名検索
      */
     buildSearchURLByPhotographerName = (query) => {
-        const url = new URL(this.settings.adminAppUrl);
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL(this.settings.adminAppUrl);
         url.searchParams.set("action_photographer_index", "true");
         url.searchParams.set("search", "true");
         url.searchParams.set("search_name", query);
@@ -103,10 +103,10 @@ export class PCTamperMonkey {
      * 取引先検索
      */
     buildSearchURLByPartnerName = (query) => {
-        const url = new URL(this.settings.adminAppUrl);
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL(this.settings.adminAppUrl);
         url.searchParams.set("action_partner_index", "true");
         url.searchParams.set("search_str", query);
 
@@ -117,12 +117,11 @@ export class PCTamperMonkey {
       * 写真番号検索のURLを生成
       */
     buildSearchURLByPhotoNum = (query) => {
-        const url = new URL(this.settings.adminAppUrl);
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL(this.settings.adminAppUrl);
         if(query.indexOf("\r") > 0 || query.indexOf("\n") > 0) {
-            //query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "%0D%0A");
             query = query.replace(/ /g, "").replace(/(\r|\n|\r\n)/g, "\r\n");
         }
         query = query.trim()
@@ -138,10 +137,10 @@ export class PCTamperMonkey {
      * Google Cloud Search で検索するURLを生成
      */
     buildGoogleCloudSearchURL = (query) => {
-        const url = new URL("https://cloudsearch.google.com/cloudsearch/search");
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL("https://cloudsearch.google.com/cloudsearch/search");
         url.searchParams.set("q", query);
 
         return url.toString();
@@ -151,15 +150,13 @@ export class PCTamperMonkey {
      * ジョブカン労務検索
      */
     buildJobcanLMSSearchURL = (query) => {
-        const url = new URL("https://lms.jobcan.jp/employees");
-        if (query.length === 0) {
-            return;
+        if (window.top !== window.self || query.length === 0) {
+            return "";
         }
+        const url = new URL("https://lms.jobcan.jp/employees");
         url.searchParams.set("q", query);
 
         return url.toString();
     }
-
-
 
 }
