@@ -10,6 +10,7 @@
 // @grant        GM_log
 // @grant        GM_openInTab
 // @run-at       context-menu
+// @noframes
 // ==/UserScript==
 
 (function() {

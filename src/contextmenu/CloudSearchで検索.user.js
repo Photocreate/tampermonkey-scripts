@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CloudSearchで検索
 // @namespace    https://admin-app.photocreate.jp/
-// @version      1.0
+// @version      1.1
 // @description  選択した文字列をGoogle CloudSearch で検索します
 // @include      *
 // @exclude      file://*
@@ -10,6 +10,7 @@
 // @grant        GM_log
 // @grant        GM_openInTab
 // @run-at       context-menu
+// @noframes
 // ==/UserScript==
 
 (function() {

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [管理画面]注文番号検索
 // @namespace    https://admin-app.photocreate.jp/
-// @version      1.0
+// @version      1.1
 // @description  管理画面から選択した文字列をもとに注文番号検索を行います
 // @include      *
 // @exclude      file://*
@@ -10,6 +10,7 @@
 // @grant        GM_log
 // @grant        GM_openInTab
 // @run-at       context-menu
+// @noframes
 // ==/UserScript==
 
 (function() {

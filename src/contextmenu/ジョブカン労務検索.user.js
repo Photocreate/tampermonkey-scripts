@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [ジョブカン労務]従業員検索
 // @namespace    https://lms.jobcan.jp/
-// @version      1.0
+// @version      1.1
 // @description  ジョブカン労務従業員一覧から検索します
 // @include      *
 // @exclude      file://*
@@ -10,6 +10,7 @@
 // @grant        GM_log
 // @grant        GM_openInTab
 // @run-at       context-menu
+// @noframes
 // ==/UserScript==
 
 (function() {
