@@ -22,7 +22,7 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 ### 初期設定
 
 
-- [zipファイル](https://github.com/photocreate/tampermonkey-scripts/releases/download/v1.1/tampermonkey.zip)をダウンロードしておきます（解凍する必要はありません）
+- [zipファイル](https://github.com/photocreate/tampermonkey-scripts/releases/download/v1.3/tampermonkey.zip)をダウンロードしておきます（解凍する必要はありません）
 - 拡張機能のオプション画面を開きます
     - URLに `chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils` を入力します
     - `ユーティリティ` タブを開きます
@@ -46,7 +46,7 @@ Chrome 拡張機能である Tampermonkey （[Chrome Web Storeはこちら](http
 
 ### 配布スクリプトの更新方法
 
-こちらは初期インストール後にスクリプトの更新があった場合の手順です。更新の案内があった際に実行します。
+こちらは初期インストール後にスクリプトの更新があった場合の手順です。更新の案内があった際に実行します。（※自動更新されるようにはしています）
 
 - Chromeのメニュー `その他のメニュー` から `拡張機能`
 - [拡張機能のユーティリティ](chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils) を開く
