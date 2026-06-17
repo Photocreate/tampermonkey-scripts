@@ -7,6 +7,8 @@
 // @match      https://kinrouap1.hr44.jp/kinrou/kojin/kintaiDakoku/
 // @grant        GM_log
 // @grant       GM_xmlhttpRequest
+// @updateURL    https://raw.githubusercontent.com/photocreate/tampermonkey-scripts/main/src/onload/%E9%87%8D%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%90%E3%83%83%E3%82%AF%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF.user.js
+// @downloadURL  https://raw.githubusercontent.com/photocreate/tampermonkey-scripts/main/src/onload/%E9%87%8D%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E3%83%90%E3%83%83%E3%82%AF%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF.user.js
 // ==/UserScript==
 
 (function() {

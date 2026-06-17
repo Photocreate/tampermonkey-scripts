@@ -11,6 +11,8 @@
 // @grant        GM_openInTab
 // @run-at       context-menu
 // @noframes
+// @updateURL    https://raw.githubusercontent.com/photocreate/tampermonkey-scripts/main/src/contextmenu/%E5%8F%96%E5%BC%95%E5%85%88%E6%A4%9C%E7%B4%A2.user.js
+// @downloadURL  https://raw.githubusercontent.com/photocreate/tampermonkey-scripts/main/src/contextmenu/%E5%8F%96%E5%BC%95%E5%85%88%E6%A4%9C%E7%B4%A2.user.js
 // ==/UserScript==
 
 (function() {
